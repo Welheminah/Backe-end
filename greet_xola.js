@@ -9,4 +9,11 @@ figlet(greet('Xola'), function(err, data) {
         return;
     }
     console.log(data)
+
+    const chalk = require('chalk');
+
+    const greet = require('./greet');
+    
+    const msg = chalk.bgBlue.black(greet('Xola'));
+    console.log(msg);
 });
